@@ -6,17 +6,17 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const char *fonts[]          = { "Hack:size=10" };
-static const char dmenufont[]       = "Hack:size=10";
-static const char gruvbox_bg0[]       = "#282828";
-static const char gruvbox_bg1[]       = "#3c3836";
-static const char gruvbox_fg3[]       = "#bdae93";
-static const char gruvbox_fg1[]       = "#ebdbb2";
-static const char gruvbox_purple[]        = "#d3869b";
+static const char *fonts[]          = { "Hack:size=12" };
+static const char dmenufont[]       = "Hack:size=12";
+static const char gruvbox_bg0[]     = "#282828";
+static const char gruvbox_bg1[]     = "#3c3836";
+static const char gruvbox_fg3[]     = "#bdae93";
+static const char gruvbox_fg1[]     = "#ebdbb2";
+static const char gruvbox_purple[]  = "#d3869b";
 static const char *colors[][3]      = {
-	/*               fg         bg         border   */
-	[SchemeNorm] = { gruvbox_fg3, gruvbox_bg0, gruvbox_bg1 },
-	[SchemeSel]  = { gruvbox_fg1, gruvbox_purple,  gruvbox_purple  },
+	/*               fg           bg              border         */
+	[SchemeNorm] = { gruvbox_fg1, gruvbox_bg1,    gruvbox_bg1    },
+	[SchemeSel]  = { gruvbox_bg0, gruvbox_purple, gruvbox_purple },
 };
 
 /* tagging */
