@@ -192,6 +192,7 @@ static void manage(Window w, XWindowAttributes *wa);
 static void mappingnotify(XEvent *e);
 static void maprequest(XEvent *e);
 static void monocle(Monitor *m);
+static wchar_t getmonoclesymbol(unsigned int n);
 static void motionnotify(XEvent *e);
 static void movemouse(const Arg *arg);
 static Client *nexttiled(Client *c);
@@ -1194,9 +1195,36 @@ monocle(Monitor *m)
 		if (ISVISIBLE(c))
 			n++;
 	if (n > 0) /* override layout symbol */
-		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
+		snprintf(m->ltsymbol, sizeof m->ltsymbol, "%lc", getmonoclesymbol(n));
 	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
 		resize(c, m->wx, m->wy, m->ww - 2 * c->bw, m->wh - 2 * c->bw, 0);
+}
+
+wchar_t
+getmonoclesymbol(unsigned int n)
+{
+  switch(n) {
+  case 1:
+    return 0x0f03a4;
+  case 2:
+    return 0x0f03a7;
+  case 3:
+    return 0x0f03aa;
+  case 4:
+    return 0x0f03ad;
+  case 5:
+    return 0x0f03b1;
+  case 6:
+    return 0x0f03b3;
+  case 7:
+    return 0x0f03b6;
+  case 8:
+    return 0x0f03b9;
+  case 9:
+    return 0x0f03bc;
+  default:
+    return 0x0f03bf;
+  }
 }
 
 void
