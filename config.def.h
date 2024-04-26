@@ -90,6 +90,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("dm-network") },
 	{ MODKEY|ShiftMask,             XK_p,      spawn,          SHCMD("dm-power") },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("dm-man") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
