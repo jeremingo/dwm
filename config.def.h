@@ -97,6 +97,7 @@ static const Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("dm-man") },
 	{ MODKEY|ShiftMask,             XK_s,      spawn,          SHCMD("dm-search") },
 	{ MODKEY|ShiftMask,             XK_b,      spawn,          SHCMD("dm-bookmarks") },
+	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("dm-tmuxinator") },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
